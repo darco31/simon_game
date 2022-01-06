@@ -2,6 +2,7 @@ let game = {
     score: 0,
     currentGame: [],
     playerMoves: [],
+    turnNumber: [],
     choices: ["button1", "button2", "button3", "button4"],
 }
 
