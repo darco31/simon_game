@@ -52,11 +52,22 @@ function showTurns() {
     }, 800);
 };
 
+function playerTurn() {
+    let i = game.playerMoves.length - 1;
+    if (game.currentGame[i] === game.playerMoves[i]) {
+        if (game.currentGame.length == game.playerMoves.length) {
+            game.score++;
+            addTurn();
+        }
+    }
+}
+
 module.exports = {
     game,
     newGame,
     showScore,
     addTurn,
     lightsOn,
-    showTurns
+    showTurns,
+    playerTurn
 };
