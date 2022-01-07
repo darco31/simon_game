@@ -14,8 +14,9 @@ function newGame() {
         if (circle.getAttribute("data-listener") != "true") {
             circle.addEventListener("click", (e) => {
                 let move = e.target.getAttribute("id");
-                lightsOn(move);
                 game.playerMoves.push(move);
+                lightsOn(move);
+                playerTurn();
             });
             circle.setAttribute("data-listener", "true");
         }
