@@ -107,4 +107,14 @@ describe("game play works correctly", () => {
         playerTurn();
         expect(window.alert).toBeCalledWith("Wrong move!");
     });
+    test("should toggle turnInProgess to true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
+    });
+    test("clicking during computer sequence shouldn fail", () => {
+        showTurns();
+        game.lastButton = "";
+        document.getElementById("button2").click();
+        expect(game.lastButton).toEqual("");
+    });
 });
