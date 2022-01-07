@@ -84,6 +84,7 @@ h2 {
     top: 550px;
     position: relative;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .light {
